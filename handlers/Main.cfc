@@ -1,0 +1,1 @@
+﻿component extends="coldbox.system.EventHandler"{	// Default Action	function index(event,rc,prc){		prc.teamList = entityLoad("Team");	}	function doReset(event,rc,prc){		abort;	}}
