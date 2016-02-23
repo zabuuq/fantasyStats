@@ -48,20 +48,18 @@ component{
 			ormReload();
 		}
 		
-		/**
-		* To add extra <html><head> information to the page the ColdFusion tag <cfhtmlhead> can be used,
-		* however there is no <cfhtmlfoot> tag for placing extra elements at the bottom of the page.
-		* 
-		* So, for storing, passing and displaying content at the end of the page REQUEST.htmlFootArray is
-		* created in the onRequestStart() function in Application.cfc.
-		* 
-		* Usage:
-		* <cfset arrayAppend(REQUEST.htmlFootArray, HTMLFOOTCONTENT) />
-		* 
-		* This will usually be used for passing calls to JavaScript file calls to the bottom of the page.
-		* At the bottom of each layout, REQUEST.htmlFootArray will be looped through and its content placed
-		* on the bottom of the page.
-		* */
+		// To add extra <html><head> information to the page the ColdFusion tag <cfhtmlhead> can be used,
+		// however there is no <cfhtmlfoot> tag for placing extra elements at the bottom of the page.
+		
+		// So, for storing, passing and displaying content at the end of the page REQUEST.htmlFootArray is
+		// created in the onRequestStart() function in Application.cfc.
+		
+		// Usage:
+		// <cfset arrayAppend(REQUEST.htmlFootArray, HTMLFOOTCONTENT) />
+		
+		// This will usually be used for passing calls to JavaScript file calls to the bottom of the page.
+		// At the bottom of each layout, REQUEST.htmlFootArray will be looped through and its content placed
+		// on the bottom of the page.
 		REQUEST.htmlFootArray = [];
 
 		// Process ColdBox Request
@@ -86,10 +84,8 @@ component{
 		try {
 			writeOutput("<div>I'm sorry, an error occured with that request.  Please reload the page and try again.  If this problem persists, contact the system administrator.</div>");
 
-			/**
-			* @TODO
-			* Add error reporting to an email?
-			*/
+			// @TODO
+			// Add error reporting to an email?
 
 			var logMsg = "#arguments.error.Message# /--||--/ #arguments.error.Detail#";
 			for(tag in arguments.error.TagContext){
