@@ -49,7 +49,7 @@ component{
 		}
 		
 		// To add extra <html><head> information to the page the ColdFusion tag <cfhtmlhead> can be used,
-		// however there is no <cfhtmlfoot> tag for placing extra elements at the bottom of the page.
+		// however there is no "cfhtmlfoot" tag for placing extra elements at the bottom of the page.
 		
 		// So, for storing, passing and displaying content at the end of the page REQUEST.htmlFootArray is
 		// created in the onRequestStart() function in Application.cfc.
